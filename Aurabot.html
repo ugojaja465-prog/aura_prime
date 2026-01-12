@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Prime CBT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="welcome-screen" class="container">
+        <h1>Aura Prime</h1>
+        <p>Select a subject to begin:</p>
+        <button onclick="startExam('math')">Mathematics</button>
+        <button onclick="startExam('english')">English</button>
+        <button onclick="startExam('physics')">physics</button>
+        <button onclick="startExam('chemistry')">chemistry</button>
+    </div>
+
+    <div id="exam-screen" class="container" style="display:none;">
+        <div class="header">
+            <button onclick="goToMenu()" class="back-btn">← Back</button>
+            <div id="timer">00:00</div>
+        </div>
+        <h2 id="q-text">Question text will appear here.</h2>
+        <div id="options-box"></div>
+
+    <div id="explanation-box" style="display:none; margin-top: 20px; padding: 15px; border-radius: 8px;">
+        <p id="feedback-text" style="font-weight: bold;"></p>
+        <p id="exp-content"></p>
+        <button id="next-btn" onclick="nextQuestion()" style="background: #28a745;">Next Question →</button>
+    </div>
+</div>
+    </div>
+
+    <div id="results-screen" class="container" style="display:none;">
+        <h1>Exam Finished!</h1>
+        <div class="score-circle">
+            <span id="final-score">0</span>
+        </div>
+        <p id="percentage-text"></p>
+        <button onclick="goToMenu()">Try Another Subject</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
